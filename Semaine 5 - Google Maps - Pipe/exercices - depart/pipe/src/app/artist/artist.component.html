@@ -4,7 +4,7 @@
 
 <div style="display: flex; flex-wrap: wrap; margin: 20px;">
   <mat-card class="artist-card" *ngFor="let album of albums">
-    <img mat-card-image src="{{album.image}}">
+    <img mat-card-image src="{{album.image | noImage}}">
     <mat-card-content><p>{{album.name}}</p></mat-card-content>
   </mat-card>
 </div>

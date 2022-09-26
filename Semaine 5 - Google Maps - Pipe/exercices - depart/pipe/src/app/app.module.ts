@@ -8,12 +8,14 @@ import {FormsModule} from '@angular/forms';
 import {LibraryService} from './library.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
+import { NoImagePipe } from './noImage.pipe';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     ArtistComponent,
-  ],
+      NoImagePipe
+   ],
   imports: [
     BrowserModule,
     HttpClientModule,
