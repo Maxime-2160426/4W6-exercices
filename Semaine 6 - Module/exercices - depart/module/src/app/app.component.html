@@ -1,16 +1,24 @@
-<!--<mat-toolbar>-->
-  <!--<mat-icon style="margin-right: 8px">album</mat-icon--><span>Super Musique Infinie</span>
-<!--</mat-toolbar>-->
+<mat-toolbar>
+  <mat-icon style="margin-right: 8px">album</mat-icon><span>Super Musique Infinie</span>
+</mat-toolbar>
 
-<div style="max-width: 300px; margin: 20px;">
-  <input placeholder="Nouvel artiste" value="">
-  <button color="primary">Ajouter</button>
-</div>
+<mat-card style="max-width: 300px; margin: 20px;">  
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nouvel Artiste</mat-label>
+    <input matInput placeholder="Ex. Celine dion" value="">
+  </mat-form-field>
+  <button mat-raised-button color="primary"> Ajouter </button>
+</mat-card>
+
 
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; margin: 20px;">
-  <div style="max-width: 400px;" *ngFor="let artist of artists">
-    {{artist.name}}
-    <img [src]="artist.image">
-  </div>
+  <mat-card style="max-width: 400px;" *ngFor="let artist of artists">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{artist.name}}</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="artist.image">
+  </mat-card>
 </div>
